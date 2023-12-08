@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+    <title>Garage Status</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="top-banner">
+            <div class="top-banner-title">
+                <h1>FS3 Parking</h1>
+                <img src="{{ url_for('static', filename='img/parking-car.png') }}" alt="Description" class="top-banner-parking-icon">
+            </div>
+        </div>
+
+        <div class="card-container">
+
+            <div class="blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="wifi-icon">
+                        <img class="wifiSignal" alt="WiFi Signal">
+                    </div>
+                    <div class="battery-icon">
+                        <p class="batteryLevel"></p>
+                        <img src="{{ url_for('static', filename='img/charging.png') }}" alt="Battery Level">
+                    </div>
+                    <div class="blog-slider__img">   
+                      <img id="parkingSpotImage1" src="{{ url_for('static', filename='img/free.jpg') }}" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                      <span class="blog-slider__code"></span>
+                      <div class="blog-slider__title">Parking Spot #1</div>
+                      <div class="status-indicator">
+                        <span id="status1" class="text-secondary">Loading...</span>
+                    </div>
+                        <div class="blog-slider__text">
+                            The parking spot status is updated frequently with a five-minute interval
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="wifi-icon">
+                        <img class="wifiSignal" alt="WiFi Signal">
+                    </div>
+                    <div class="battery-icon">
+                        <p class="batteryLevel"></p>
+                        <img src="{{ url_for('static', filename='img/charging.png') }}" alt="Battery Level">
+                    </div>
+                    <div class="blog-slider__img">   
+                      <img id="parkingSpotImage2" src="{{ url_for('static', filename='img/occupied.jpg') }}" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                      <span class="blog-slider__code"></span>
+                      <div class="blog-slider__title">Parking Spot #2</div>
+                      <div class="status-indicator">
+                        <span id="status2" class="text-secondary">Loading...</span>
+                    </div>
+                        <div class="blog-slider__text">
+                            The parking spot status is updated frequently with a five-minute interval 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+       
+        <div class="footer">
+            
+            <img src="{{ url_for('static', filename='img/footerimgCr.png') }}" alt="Description" class="img">
+            <div>
+            <h3> Info </h3>
+            <p> Developed by: Belfant </p>
+            
+            <p>GitHub: 
+                <a href="https://github.com/Belfant" target="_blank">
+                    <img src="{{ url_for('static', filename='img/githubIconWhite.png') }}" alt="GitHub Icon" class="github-icon">
+                </a>
+            </p>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
